@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swipe Images</title>
+    <style>
+        .image-container {
+            display:flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .image-container img {
+            scroll-snap-align: start;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="C:\Users\Anand\Videos\bikash\istockphoto-1307831372-170667a.jpg" alt="Image 1">
+        <img src="C:\Users\Anand\Videos\bikash\IMG-20230220-WA0018.jpg" alt="Image 2">
+        <img src="C:\Users\Anand\Videos\bikash\IMG-20230311-WA0004.jpg" alt="Image 3">
+        <img src="C:\Users\Anand\Videos\bikash\BIKASH TECH.jpg" alt="Image 4">
+        <!-- Add more images here -->
+    </div>
+
+    <script>
+        // JavaScript code to enable swiping through images
+        var container = document.querySelector('.image-container');
+        var images = document.querySelectorAll('.image-container img');
+
+        var startTouchX;
+        var scrollLeft;
+
+        container.addEventListener('touchstart', touchStart, false);
+        container.addEventListener('touchmove', touchMove, false);
+
+        function touchStart(event) {
+            startTouchX = event.touches[0].clientX;
+            scrollLeft = container.scrollLeft;
+        }
+
+        function touchMove(event) {
+            var touchX = event.touches[0].clientX;
+            var swipeDistance = startTouchX - touchX;
+            container.scrollLeft = scrollLeft + swipeDistance;
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

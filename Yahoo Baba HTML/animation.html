@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Truck Animation</title>
+    <style>
+        .truck {
+            width: 100px;
+            height: 60px;
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            transition: left 2s linear;
+        }
+
+        .order {
+            width: 50px;
+            height: 30px;
+            background-color: blue;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transition: left 2s linear;
+        }
+
+        .delivery {
+            width: 50px;
+            height: 30px;
+            background-color: green;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transition: left 2s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="truck"></div>
+
+    <script>
+        var truck = document.querySelector('.truck');
+        var order = document.createElement('div');
+        order.className = 'order';
+        var delivery = document.createElement('div');
+        delivery.className = 'delivery';
+
+        // Function to move the truck and simulate the animation
+        function animateTruck() {
+            truck.style.left = 'calc(100% - 100px)';
+            setTimeout(function() {
+                truck.appendChild(order);
+                order.style.left = 'calc(100% - 50px)';
+                setTimeout(function() {
+                    truck.removeChild(order);
+                    truck.appendChild(delivery);
+                    delivery.style.left = 'calc(100% - 50px)';
+                    setTimeout(function() {
+                        truck.removeChild(delivery);
+                        truck.style.left = '-100px';
+                    }, 2000); // Wait for 2 seconds before resetting the truck position
+                }, 2000); // Wait for 2 seconds after delivering the order
+            }, 2000); // Wait for 2 seconds after taking the order
+        }
+
+        // Call the animateTruck function after the page loads
+        window.addEventListener('load', animateTruck);
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>FUNCTION SYNTAX</title>
+		<script>
+			function hello(){
+			document.write("Hellos Everyone");
+			}
+			
+			hello();
+			document.write("<br>");
+			hello();
+			document.write("<br>");
+			hello();
+			document.write("<br>");
+			hello();
+			document.write("<br>");
+			
+			
+			
+			function name(fname,lname){
+			document.write("Hello" + fname + lname);
+			}
+			name(" Bikash", " Singh");
+			document.write("<br>");
+			
+			function hey(fname="Bikash ", lname="Parmar"){
+			document.write("Hello" + fname + "  " + lname);
+			}
+			hey(" Manish", " Anand");
+			document.write("<br>");
+			hey(" Ankit", " Kumar");
+			document.write("<br>");
+			function sum(a,b){
+			document.write(a+b);
+			}
+			sum(20,30);
+			document.write("<br>");
+			
+			
+			
+			
+			
+			function add(math,english,sc){
+			var s= math + english + sc;
+			return s;
+			}
+			function percentage(total){
+			var per =total*100/300;
+			document.write(per);
+				}
+			var total=add(80,80,80);
+			percentage(total);
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<h3>FUNCTION SYNTAX</h3>
+	</body>
+</html>

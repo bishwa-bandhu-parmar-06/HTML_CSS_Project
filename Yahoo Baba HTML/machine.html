@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech Recognition</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.6.0"></script>
+</head>
+<body>
+    <h1>Speech Recognition Example</h1>
+    <button onclick="startListening()">Start Listening</button>
+    <button onclick="stopListening()">Stop Listening</button>
+    <div id="result"></div>
+
+    <script>
+        let recognizer;
+
+        async function startListening() {
+            recognizer = speechCommands.create('BROWSER_FFT');
+            await recognizer.ensureModelLoaded();
+
+            recognizer.listen(result => {
+                const { scores } = result;
+                const labels = recognizer.wordLabels();
+                const index = scores.indexOf(Math.max(...scores));
+                const word = labels[index];
+                document.getElementById('result').textContent = `Heard: ${word}`;
+            }, { probabilityThreshold: 0.75 });
+        }
+
+        function stopListening() {
+            if (recognizer) {
+                recognizer.stopListening();
+                recognizer = null;
+            }
+        }
+    </script>
+</body>
+</html>
