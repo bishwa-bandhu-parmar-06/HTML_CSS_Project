@@ -1,0 +1,564 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*###################### it is for the New menu navigation  ##############################*/
+.header {
+    height: 50px;
+    width: 100%;
+    background-color: #007C9D;
+    position: relative; /* Add this line */
+}
+.header ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header ul li {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.header ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+.header ul li:hover {
+    background-color: white;
+    color: #007C9D;
+    a {
+        color: #007C9D;
+        transition: all 0.3s ease-in-out;
+    }
+}
+#register:hover ul {
+    display: block;
+}
+#register ul {
+    height: 50px;
+    width: 150px;
+    /* margin-top: 5px; */
+    height: min-content;
+    width: 200px;
+    background-color: #007C9D;
+    display: none;
+    /* padding: 20px; */
+    /* border-radius: 5px; */
+    position: absolute; /* Add this line */
+    top: 100%; /* Add this line */
+    right: 20px; /* Add this line */
+    z-index: 999; /* Add this line */
+}
+#register ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+#register ul li a {
+    color: white;
+}
+#register ul li:hover {
+    background-color: white;
+    color: #007C9D;
+    a {
+        color: #007C9D;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%  It is for login sdection hover content %%%%%%%%%%%%%%%%%%%% */
+
+#Login:hover ul {
+    display: block;
+}
+#Login ul {
+    height: 50px;
+    width: 150px;
+    /* margin-top: 5px; */
+    height: min-content;
+    width: 200px;
+    background-color: #007C9D;
+    display: none;
+    /* padding: 20px; */
+    /* border-radius: 5px; */
+    position: absolute; /* Add this line */
+    top: 100%; /* Add this line */
+    right: 270px; /* Add this line */
+    z-index: 999; /* Add this line */
+}
+#Login ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+#Login ul li a {
+    color: white;
+}
+#Login ul li:hover {
+    background-color: white;
+    color: #007C9D;
+    a {
+        color: #007C9D;
+        transition: all 0.3s ease-in-out;
+    }
+}
+/* #############################    IT IS FOR SERVICES DROPDOWN     ####################### */
+#services:hover ul {
+    display: block;
+}
+#services ul {
+    height: 50px;
+    width: 300px;
+    height: min-content;
+    background-color: #007C9D;
+    display: none;
+    position: absolute; 
+    top: 100%; 
+    left: 33%; 
+    z-index: 999;
+}
+#services ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+#services ul li a {
+    color: white;
+}
+#services ul li:hover {
+    background-color: white;
+    color: #007C9D;
+    a {
+        color: #007C9D;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+/* #############################    IT IS FOR HOSPITAL SERVICES DROPDOWN     ####################### */
+#services #hospitalServices ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+#services #hospitalServices:hover ul {
+    display: block;
+}
+
+#hospitalServices ul {
+    height: min-content;
+    width: 400px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#hospitalServices ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#hospitalServices:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#hospitalServices ul li:hover {
+    background-color: white;
+}
+
+#hospitalServices ul li:hover a {
+    color: #007C9D;
+}
+
+
+/* #############################    IT IS FOR Clinical SERVICES DROPDOWN     ####################### */
+#services #ClinicalServices ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+#services #ClinicalServices:hover ul {
+    display: block;
+}
+
+#ClinicalServices ul {
+    height: min-content;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#ClinicalServices ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#ClinicalServices:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#ClinicalServices ul li:hover {
+    background-color: white;
+}
+
+#ClinicalServices ul li:hover a {
+    color: #007C9D;
+}
+
+
+
+/* #############################    IT IS FOR deepartments SERVICES DROPDOWN     ####################### */
+#services #deepartments ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+#services #deepartments:hover ul {
+    display: block;
+}
+
+#deepartments ul {
+    height: min-content;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#deepartments ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#deepartments:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#deepartments ul li:hover {
+    background-color: white;
+}
+
+#deepartments ul li:hover a {
+    color: #007C9D;
+}
+
+
+
+/* #############################    IT IS FOR DiagnosticsServices SERVICES DROPDOWN     ####################### */
+#services #DiagnosticsServices ul {
+    display: none;
+    position: absolute;
+    top: 36%;
+    left: 100%;
+}
+
+#services #DiagnosticsServices:hover ul {
+    display: block;
+}
+
+#DiagnosticsServices ul {
+    height: min-content;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#DiagnosticsServices ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#DiagnosticsServices:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#DiagnosticsServices ul li:hover {
+    background-color: white;
+}
+
+#DiagnosticsServices ul li:hover a {
+    color: #007C9D;
+}
+
+
+/* #############################    IT IS FOR LaboratoryServices SERVICES DROPDOWN     ####################### */
+#services #LaboratoryServices ul {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+
+#services #LaboratoryServices:hover ul {
+    display: block;
+}
+
+#LaboratoryServices ul {
+    height: min-content;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#LaboratoryServices ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#LaboratoryServices:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#LaboratoryServices ul li:hover {
+    background-color: white;
+}
+
+#LaboratoryServices ul li:hover a {
+    color: #007C9D;
+}
+
+/* #############################    IT IS FOR TransfusionServices SERVICES DROPDOWN     ####################### */
+#services #TransfusionServices ul {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 100%;
+}
+
+#services #TransfusionServices:hover ul {
+    display: block;
+}
+
+#TransfusionServices ul {
+    height: min-content;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#TransfusionServices ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#TransfusionServices:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#TransfusionServices ul li:hover {
+    background-color: white;
+}
+
+#TransfusionServices ul li:hover a {
+    color: #007C9D;
+}
+
+
+/* #############################    IT IS FOR hospitalsfunctions SERVICES DROPDOWN     ####################### */
+#services #hospitalsfunctions ul {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 100%;
+}
+
+#services #hospitalsfunctions:hover ul {
+    display: block;
+}
+
+#hospitalsfunctions ul {
+    height: min-content;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#hospitalsfunctions ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#hospitalsfunctions:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#hospitalsfunctions ul li:hover {
+    background-color: white;
+}
+
+#hospitalsfunctions ul li:hover a {
+    color: #007C9D;
+}
+
+/* #############################    IT IS FOR bedtypes SERVICES DROPDOWN     ####################### */
+#services #bedtypes ul {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 100%;
+}
+
+#services #bedtypes:hover ul {
+    display: block;
+}
+
+#bedtypes ul {
+    height: min-content;
+    width: 300px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: #007C9D;
+}
+
+#bedtypes ul li {
+    margin: auto;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    line-height: 40px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#bedtypes:hover ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#bedtypes ul li:hover {
+    background-color: white;
+}
+
+#bedtypes ul li:hover a {
+    color: #007C9D;
+}

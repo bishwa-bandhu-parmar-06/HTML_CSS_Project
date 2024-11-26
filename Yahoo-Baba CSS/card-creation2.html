@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-positining Properties</title>
+    <style>
+        .card {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background-color: burlywood;
+        }
+        .card-deatails {
+            position: absolute;
+            top: 100%;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 0%;
+            width: 100%;
+            background-color: darkslategray;
+            transition: 0.8s ease;
+            overflow: hidden;
+        }
+        .card:hover .card-deatails {
+            height: 100%;
+            top: 0%;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-deatails">
+            <h1>Hello, Bikash Singh</h1>
+        </div>
+    </div>
+</body>
+</html>
